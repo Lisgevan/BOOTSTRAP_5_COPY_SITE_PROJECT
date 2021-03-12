@@ -1,0 +1,332 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #f8f9fa;
+	/* background-color: #a1a1a1; */
+	padding-top: 150px;
+}
+
+/* <== Navigation styling ==> */
+.clickedLink:hover {
+	background-color: #198754;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+	background-color: #198754;
+}
+
+.form-control {
+	color: #198754;
+	background-color: #a1a1a126;
+	border: 1px solid #198754;
+}
+
+.form-control:focus {
+	color: #198754;
+	background-color: #fff;
+	border-color: #198754;
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem rgb(25 135 84 / 25%);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+	background-color: #198754;
+}
+/* <=================================> */
+
+/* <== Hero styling ==> */
+#hero .position-relative {
+	width: 100%;
+	height: 100%;
+}
+
+#hero p {
+	font-weight: 700;
+	color: #4ef3a6;
+	text-shadow: 1px 1px 2px #198754, 0 0 1em #198754, 0 0 0.2em blue;
+}
+
+#hero img {
+	width: 100%;
+	height: 75vh;
+}
+
+#hero button,
+#hero button:hover {
+	background-color: rgb(78, 243, 166);
+	border-color: #4ef3a6;
+	color: rgb(8, 48, 29);
+	font-weight: bold;
+}
+
+#hero button:hover {
+	box-shadow: -0.5em 0em 0.5em 0.1em rgba(78, 243, 166, 1), 0em -0.5em 0.5em 0.1em rgba(78, 243, 166, 0.5),
+		0em 0.5em 0.5em 0.1em rgba(78, 243, 166, 0.5), 0.5em 0em 0.5em 0.1em rgba(78, 243, 166, 1);
+}
+/* <=================================> */
+
+/* <== Carousel ==> */
+
+.carousel {
+	margin: 0 auto;
+	padding: 0 68px;
+}
+
+.carousel .card {
+	border-radius: 2em;
+}
+
+.carousel .card-body {
+	/* height: 75vh; */
+}
+
+.carousel .carousel-item {
+	text-align: center;
+	overflow: hidden;
+	/* height: 60vh; */
+}
+
+.carousel .carousel-item .img-box {
+	background: #fff;
+	padding: 9px;
+	box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.4);
+}
+
+.carousel img {
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 95%;
+	height: 50%;
+	border-start-start-radius: 2em;
+	border-start-end-radius: 2em;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	width: 68px;
+	background: none;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+	font-size: 28px;
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	margin-top: -15px;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	color: rgba(0, 0, 0, 0.8);
+	text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+
+.carousel-indicators {
+	bottom: -40px;
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	border: none;
+	border-radius: 50%;
+	margin: 1px 4px;
+	box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators li {
+	background: #999;
+	border-color: transparent;
+}
+
+.carousel-indicators li.active {
+	background: #555;
+}
+
+.carousel a:hover {
+	box-shadow: -0.5em 0em 0.5em 0.1em rgba(78, 243, 166, 1), 0em -0.5em 0.5em 0.1em rgba(78, 243, 166, 0.5),
+		0em 0.5em 0.5em 0.1em rgba(78, 243, 166, 0.5), 0.5em 0em 0.5em 0.1em rgba(78, 243, 166, 1);
+}
+
+.carousel .card-footer {
+	border-end-start-radius: 2em;
+	border-end-end-radius: 2em;
+}
+/* <=================================> */
+
+/* Cook book - Subscribe section */
+#cbs {
+	background-color: #fff;
+	border-radius: 2em;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+#cbs img {
+	width: 90%;
+}
+
+#cbs a:hover {
+	box-shadow: -0.5em 0em 0.5em 0.1em rgba(78, 243, 166, 1), 0em -0.5em 0.5em 0.1em rgba(78, 243, 166, 0.5),
+		0em 0.5em 0.5em 0.1em rgba(78, 243, 166, 0.5), 0.5em 0em 0.5em 0.1em rgba(78, 243, 166, 1);
+}
+
+#cbs .card-body,
+#cbs h3 {
+	padding: 0.5em;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#cbs .card {
+	border-radius: unset;
+	border-start-start-radius: 2em;
+	border-end-start-radius: 2em;
+}
+/* <=================================> */
+
+/* section 02 */
+#section02 img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+#section02 figure {
+	align-items: center;
+}
+/* <=================================> */
+
+/* section 03 */
+.brdrStyle {
+	border: 2px solid red;
+}
+
+#section03 .row {
+	background-color: #f8f9fa;
+}
+
+/* ==> left side <== */
+#section03 .card img {
+	width: 100%;
+	height: 200px;
+}
+
+#section03 .card {
+	padding: 1em;
+	border-radius: 2em;
+	background-color: #f8f9fa;
+}
+
+/* ==> right side <== */
+#section03 li {
+	padding: 0;
+}
+
+#section03 ul a {
+	background-color: #f8f9fa;
+}
+
+#poprec .card,
+#poprec div {
+	padding: 0;
+	margin: 0;
+}
+
+#poprec .card-body {
+	padding-left: 0.5em;
+}
+
+#poprec .col-4 img {
+	height: 100px;
+}
+
+#poptag a {
+	color: #999;
+}
+
+#poptag a:hover {
+	color: #6b6a6a;
+}
+
+#folloMe img {
+	color: red;
+}
+
+#facebook:hover {
+	color: #fff;
+	background-color: rgb(12, 9, 179);
+}
+
+#twitter:hover {
+	color: #fff;
+	background-color: rgb(6, 134, 219);
+}
+
+#instagram:hover {
+	color: #fff;
+	background-color: rgb(51, 2, 129);
+}
+
+#pinterest:hover {
+	color: #fff;
+	background-color: rgb(179, 9, 9);
+}
+
+#followMe button {
+	padding: 1em;
+	width: max-content;
+}
+
+#section03 a:hover {
+	box-shadow: -0.5em 0em 0.5em 0.1em rgba(78, 243, 166, 1), 0em -0.5em 0.5em 0.1em rgba(78, 243, 166, 0.5),
+		0em 0.5em 0.5em 0.1em rgba(78, 243, 166, 0.5), 0.5em 0em 0.5em 0.1em rgba(78, 243, 166, 1);
+}
+/* <=================================> */
+
+/* Section 04 */
+
+#section04 iframe {
+	border-radius: 0.5em;
+}
+
+#section04 .card {
+	background-color: #f8f9fa;
+}
+
+/* <=================================> */
+
+/* Section About */
+#about a:hover {
+	box-shadow: -0.5em 0em 0.5em 0.1em rgba(78, 243, 166, 1), 0em -0.5em 0.5em 0.1em rgba(78, 243, 166, 0.5),
+		0em 0.5em 0.5em 0.1em rgba(78, 243, 166, 0.5), 0.5em 0em 0.5em 0.1em rgba(78, 243, 166, 1);
+}
+/* <=================================> */
+
+/* Section Follow me on Instagram */
+#sectionInst h2 a {
+	background-color: rgba(107, 106, 106, 0.2);
+	border-radius: 0.5em;
+}
+
+#sectionInst img {
+	width: 100%;
+}
+/* <=================================> */
+
+/* footer */
+#footer {
+	background-color: #ebebf0;
+}
+#footer .row {
+	margin: 0 auto;
+}
+
+#footer li {
+	list-style: none;
+	margin: 01em;
+}
+/* <=================================> */

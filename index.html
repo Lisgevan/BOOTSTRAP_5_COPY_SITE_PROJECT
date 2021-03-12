@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap 5 Copy Project</title>
+        <!-- Bootstrap css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+              crossorigin="anonymous">
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+        <!-- My css -->
+        <!-- <link rel="stylesheet" href="/css/style.css"> -->
+        <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+    </head>
+
+    <body class="container-fluid">
+
+        <!-- This is a copy  of https://around.createx.studio/demo-food-blog.html, as part of a project to practice Bootstrap5 -->
+
+        <!-- Navigation -->
+        <header>
+
+            <nav class="navbar navbar-expand-xl navbar-light bg-light fixed-top">
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="#">
+                        <img src="/images/logo.png" alt="" width="100" height="100"
+                             class="d-inline-block align-center">
+                        Baked with love!
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-pills">
+                            <li class="nav-item btn btn-outline-success">
+                                <a class="nav-link clickedLink active" id="link1"
+                                   onclick="changeActive(this.id, this.classList)"
+                                   aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item btn btn-outline-success">
+                                <a class="nav-link clickedLink" id="link2"
+                                   onclick="changeActive(this.id, this.classList)"
+                                   href="#">About us</a>
+                            </li>
+                            <li class="nav-item btn btn-outline-success">
+                                <a class="nav-link clickedLink" id="link3"
+                                   onclick="changeActive(this.id, this.classList)"
+                                   href="#">Recipes</a>
+                            </li>
+
+
+                            <li class="nav-item btn btn-outline-success dropdown d-block">
+
+                                <a type="button" id="togDrop"
+                                   class="nav-link clickedLink dropdown-toggle"
+                                   data-bs-toggle="dropdown"
+                                   aria-expanded="false">Servises
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+
+                                </a>
+                                <ul class="dropdown-menu nav-pills" id="dropLis" aria-labelledby="navbarDropdown">
+
+                                    <li><a id="drop1" class="dropdown-item" href="#"
+                                           onclick="changeActive(this.id, this.classList)">Sevice 01</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a id="drop2" class="dropdown-item" href="#"
+                                           onclick="changeActive(this.id, this.classList)">Sevice 02</a></li>
+                                    <li><a id="drop3" class="dropdown-item" href="#"
+                                           onclick="changeActive(this.id, this.classList)">Sevice 03</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+            <hr>
+
+        </header>
+        <!-- Navigation end -->
+
+        <!-- Hero -->
+        <section id="hero" class="d-none d-sm-block">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col position-relative">
+                        <img src="/images/hero-image.jpg" alt="hero image">
+                        <p class="position-absolute top-50 start-50 translate-middle mt-5 ms-5 p-1 fs-2 w-auto">
+                            Enjoy the new online cookbook
+                            <br> by John Doe
+                            <br> Get all the new recipes
+                            <br>
+                            <button class="btn btn-success mt-0 mb-0">Subscribe NOW</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <hr>
+        </section>
+        <!-- Hero end -->
+
+        <!-- Carousel -->
+        <h2 class="text-center">Featured Recipes</h2>
+        <div id="carouselExampleCaptions" class="carousel slide carousel-dark w-75 h-50" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+
+            </div>
+            <div class="carousel-inner">
+
+                <!-- slide 01 -->
+                <div class="carousel-item active">
+                    <div class="row card-group">
+                        <!-- Card 01 -->
+                        <div class="col-lg-4 col-md-6 h-100">
+                            <div class="card h-100">
+                                <img src="/images/card01.jpg" class="card-img-top" alt="Fitness card image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Keep your fitness in minutes</h5>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                        Nesciunt, laudantium. </p>
+                                    <a href="#" class="btn btn-primary">Get fit NOW!</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 02 -->
+                        <div class="col-lg-4 col-md-6 d-none d-md-block h-100">
+                            <div class="card h-100">
+                                <img src="/images/card02.jpg" class="card-img-top" alt="souvlaki card image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Souvlaki the best!</h5>
+                                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Soluta, voluptas.</p>
+                                    <a href="#" class="btn btn-primary">Get recipes</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 hours ago</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 03 -->
+                        <div class="col-lg-4 d-none d-lg-block h-100">
+                            <div class="card h-100">
+                                <img src="/images/card03.jpg" class="card-img-top" alt="tzatziki card image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nothing beats Tzatziki!!</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Suscipit, exercitationem?
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Get recipes</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 days ago</small>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- slide 02 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Card 04 -->
+                        <div class="col-lg-4 col-md-6 h-100">
+                            <div class="card h-100">
+                                <img src="/images/card04.jpg" class="card-img-top" alt="recipe card image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Subscribe for more recipes</h5>
+                                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Placeat, mollitia?
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Subscribe NOW!</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 months ago</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 05 -->
+                        <div class="col-lg-4 col-md-6 d-none d-md-block h-100">
+                            <div class="card h-100">
+                                <img src="/images/card05.jpg" class="card-img-top" alt="cake card image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Prepare a cake in under 8'</h5>
+                                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Assumenda, nihil?</p>
+                                    <a href="#" class="btn btn-primary">Start baking</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 years ago</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 06 -->
+                        <div class="col-lg-4 d-none d-lg-block h-100">
+                            <div class="card h-100">
+                                <img src="/images/card06.jpg" class="card-img-top" alt="cookies card image">
+                                <div class="card-body">
+                                    <h5 class="card-title">All times clasic cookies</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut,
+                                        earum.
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Start baking</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 centuries ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <hr>
+        <!-- Carousel end -->
+
+
+        <!-- Cook book & Subscribe section (cbs) -->
+        <section class="container" id="cbs">
+            <div class="row">
+                <div class="col-lg-6 card">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="/images/cookBook_trns.gif" alt="cook book image">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Our new Recipe Book for Teens is published!</h3>
+                                <a href="#" class="btn btn-primary">Get the Book NOW!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-3 pb-4">
+                    <h2 class="mb-2 text-center">Subscribe our newsletter</h2>
+                    <h6 class="mb-2 text-center">Never miss a post!</h6>
+                    <!-- Form subscribe-->
+                    <form class="input-group mx-auto" style="max-width: 600px;">
+                        <input class="form-control" type="email" placeholder="Enter your email" required="">
+                        <button class="btn btn-outline-success" type="submit"><i class="bi bi-cursor"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <!-- cbs end -->
+
+
+        <!-- Section 2 -->
+        <section id="section02" class="container">
+            <h2 class="text-center pb-3">Popular categories</h2>
+            <div class="row">
+                <figure class="col-md-2 col-4">
+                    <a href="#" class="text-decoration-none"><img src="/images/categories/fruits.svg"
+                             alt="image for Healthy food">
+                        <figcaption class="text-center fw-bold">Healthy</figcaption>
+                    </a>
+                </figure>
+                <figure class="col-md-2 col-4">
+                    <a href="#" class="text-decoration-none"><img src="/images/categories/cake-slice.svg"
+                             alt="image for desserts">
+                        <figcaption class="text-center fw-bold">Desserts</figcaption>
+                    </a>
+                </figure>
+                <figure class="col-md-2 col-4">
+                    <a href="#" class="text-decoration-none"><img src="/images/categories/salad.svg"
+                             alt="image for vegetarians">
+                        <figcaption class="text-center fw-bold">Vegetarian</figcaption>
+                    </a>
+                </figure>
+                <figure class="col-md-2 col-4">
+                    <a href="#" class="text-decoration-none"><img src="/images/categories/seafood.svg"
+                             alt="image for seafood">
+                        <figcaption class="text-center fw-bold">Seafood</figcaption>
+                    </a>
+                </figure>
+                <figure class="col-md-2 col-4">
+                    <a href="#" class="text-decoration-none"><img src="/images/categories/bread.svg"
+                             alt="image for bakery">
+                        <figcaption class="text-center fw-bold">Bakery</figcaption>
+                    </a>
+                </figure>
+                <figure class="col-md-2 col-4">
+                    <a href="#" class="text-decoration-none"><img src="/images/categories/soup.svg"
+                             alt="image for soups">
+                        <figcaption class="text-center fw-bold">Soups</figcaption>
+                    </a>
+                </figure>
+            </div>
+
+        </section>
+
+        <hr>
+        <!-- section 02 end` -->
+
+        <!-- Section 3 -->
+        <section id="section03" class="container">
+            <div class="row">
+                <div class="col-md-9 me-0 p-0">
+                    <div class="row g-0 align-items-center">
+                        <div class="col">
+
+                            <!-- Card 01 -->
+                            <div class="card m-3">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <img src="/images/card01.jpg" alt="Fitness card image">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Keep your fitness in minutes</h5>
+                                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                                elit.
+                                                Nesciunt, laudantium. </p>
+                                            <a href="#" class="btn btn-primary">Get fit NOW!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 02 -->
+                            <div class="card m-3">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <img src="/images/card02.jpg" class="card-img-top" alt="souvlaki card image">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Souvlaki the best!</h5>
+                                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                                elit.
+                                                Soluta, voluptas.</p>
+                                            <a href="#" class="btn btn-primary">Get recipes</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 03 -->
+                            <div class="card m-3">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <img src="/images/card03.jpg" class="card-img-top" alt="tzatziki card image">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Nothing beats Tzatziki!!</h5>
+                                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                                elit.
+                                                Suscipit, exercitationem?
+                                            </p>
+                                            <a href="#" class="btn btn-primary">Get recipes</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 04 -->
+                            <div class="card m-3">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <img src="/images/card04.jpg" class="card-img-top" alt="recipe card image">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Subscribe for more recipes</h5>
+                                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                                elit.
+                                                Placeat, mollitia?
+                                            </p>
+                                            <a href="#" class="btn btn-primary">Subscribe NOW!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 05 -->
+                            <div class="card m-3">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <img src="/images/card05.jpg" class="card-img-top" alt="cake card image">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Prepare a cake in under 8'</h5>
+                                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                                elit.
+                                                Assumenda, nihil?</p>
+                                            <a href="#" class="btn btn-primary">Start baking</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 06 -->
+                            <div class="card m-3">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <img src="/images/card06.jpg" class="card-img-top" alt="cookies card image">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">All times clasic cookies</h5>
+                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                                elit.
+                                                Ut,
+                                                earum.
+                                            </p>
+                                            <a href="#" class="btn btn-primary">Start baking</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 ms-0">
+                    <!-- Ingredients list -->
+                    <div class="row">
+                        <div class="list-group">
+                            <h4 class="align-self-center pt-3">Ingredients</h4>
+                            <ul class="pb-3">
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i
+                                           class="bi bi-chevron-right">&nbsp;&nbsp;</i>Apple<small
+                                               class="text-muted ps-1 ms-2">23</small></a></li>
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i
+                                           class="bi bi-chevron-right">&nbsp;&nbsp;</i>Banana<small
+                                               class="text-muted ps-1 ms-2">14</small></a></li>
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i class="bi bi-chevron-right">
+                                            &nbsp;&nbsp;</i>Berries<small
+                                               class="text-muted ps-1 ms-2">7</small></a></li>
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i class="bi bi-chevron-right">
+                                            &nbsp;&nbsp;</i>Cabbage<small
+                                               class="text-muted ps-1 ms-2">19</small></a></li>
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i
+                                           class="bi bi-chevron-right">&nbsp;&nbsp;</i>Citrus<small
+                                               class="text-muted ps-1 ms-2">26</small></a></li>
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i
+                                           class="bi bi-chevron-right">&nbsp;&nbsp;</i>Corn<small
+                                               class="text-muted ps-1 ms-2">8</small></a></li>
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i class="bi bi-chevron-right">
+                                            &nbsp;&nbsp;</i>Cucumber<small
+                                               class="text-muted ps-1 ms-2">25</small></a></li>
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i
+                                           class="bi bi-chevron-right">&nbsp;&nbsp;</i>Egg<small
+                                               class="text-muted ps-1 ms-2">14</small></a></li>
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i
+                                           class="bi bi-chevron-right">&nbsp;&nbsp;</i>Herbs<small
+                                               class="text-muted ps-1 ms-2">27</small></a></li>
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i
+                                           class="bi bi-chevron-right">&nbsp;&nbsp;</i>Potato<small
+                                               class="text-muted ps-1 ms-2">29</small></a></li>
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i class="bi bi-chevron-right">
+                                            &nbsp;&nbsp;</i>Tomatoes<small
+                                               class="text-muted ps-1 ms-2">32</small></a></li>
+                                <li class="list-group-item border-0"><a
+                                       class="list-group-item list-group-item-action border-0"
+                                       href="#"><i class="bi bi-chevron-right">
+                                            &nbsp;&nbsp;</i>Watermelon<small
+                                               class="text-muted ps-1 ms-2">4</small></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Popular recipes -->
+                    <div id="poprec" class="row mb-5">
+                        <h4 class="pt-3">Popular recipes</h4>
+
+                        <!-- Card 01 -->
+                        <div class="card">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <img src="/images/card01.jpg" alt="Fitness card image">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title fs-6">Keep your fitness in minutes</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 02 -->
+                        <div class="card">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <img src="/images/card02.jpg" class="card-img-top" alt="souvlaki card image">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title fs-6">Souvlaki the best!</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 03 -->
+                        <div class="card">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <img src="/images/card03.jpg" class="card-img-top" alt="tzatziki card image">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title fs-6">Nothing beats Tzatziki!!</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Popular tags -->
+                    <div id="poptag" class="row mb-1">
+                        <div class="mb-5">
+                            <h4 class="pt-3">Popular tags</h4>
+                            <a class="btn btn-outline-light me-2 mb-2" href="#">#bakery
+                            </a>
+                            <a class="btn btn-outline-light me-2 mb-2" href="#">#cookbook
+                            </a>
+                            <a class="btn btn-outline-light me-2 mb-2" href="#">#cuisine
+                            </a>
+                            <a class="btn btn-outline-light me-2 mb-2" href="#">#asian food
+                            </a>
+                            <a class="btn btn-outline-light me-2 mb-2" href="#">#tips
+                            </a>
+                            <a class="btn btn-outline-light me-2 mb-2" href="#">#recipe
+                            </a>
+                            <a class="btn btn-outline-light me-2 mb-2" href="#">#chef
+                            </a>
+                            <a class="btn btn-outline-light me-2 mb-2" href="#">#vegetarian
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Follow me -->
+                    <div id="followMe" class="row">
+                        <h4 class="pt-2">Follow me</h4>
+                        <div class="gap-2">
+                            <button id="facebook" class="btn btn-outline-dark d-inline p-3 fs-5 border-0"><i
+                                   class="bi bi-facebook"></i>
+                            </button>
+                            <button id="twitter" class="btn btn-outline-dark d-inline p-3 fs-5 border-0"><i
+                                   class="bi bi-twitter"></i></button>
+                            <button id="instagram" class="btn btn-outline-dark d-inline p-3 fs-5 border-0"><i
+                                   class="bi bi-instagram"></i>
+                            </button>
+                            <button id="pinterest" class="btn btn-outline-dark d-inline p-3 fs-5 border-0"><i
+                                   class="fab fa-pinterest-p ps-1 pe-1"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <!-- Section 3 end -->
+
+        <!-- Section 4-->
+        <section id="section04">
+            <h2 class="text-center">New video recipes every Sunday</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Officiis aspernatur veritatis facilis similique mollitia laborum placeat tempora repellat quo nobis?</p>
+            <div id="carouselExampleCaptions2" class="carousel slide carousel-dark w-75 h-50" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+
+                </div>
+                <div class="carousel-inner">
+
+                    <!-- slide 01 -->
+                    <div class="carousel-item active">
+                        <div class="row card-group">
+                            <!-- Card 01 -->
+                            <div class="col-xl-6 h-50 pb-2">
+                                <div class="card h-50 align-items-center border-0">
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/DoHLtXUsPhQ"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <!-- Card 02 -->
+                            <div class="col-xl-6 d-none d-md-block h-50 pb-2">
+                                <div class="card h-50 align-items-center border-0">
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/QQlemsVRhQk"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- slide 02 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <!-- Card 04 -->
+                            <div class="col-xl-6 h-50 pb-2">
+                                <div class="card h-50 align-items-center border-0">
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/aZXblLNKTeI"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <!-- Card 05 -->
+                            <div class="col-xl-6 d-none d-md-block h-50 pb-2">
+                                <div class="card h-50 align-items-center border-0">
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/7nGAcpIw41s"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+
+
+            <hr>
+        </section>
+        <!-- Section 04 end -->
+
+        <!-- Section About me -->
+        <section id="about" class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 d-none d-md-block mb-0"><img class="rounded-3 w-100 text-center"
+                         src="/images/about-me.jpg"
+                         alt="Amelie"></div>
+                <div class="col-md-7 ps-5">
+                    <h2 class="mb-2">Hi! I am John Doe</h2>
+                    <h3 class="h6 mb-3 text-muted">Amateur chef and creator of this blog</h3>
+                    <p class="mb-4 pb-2 text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                        blanditii praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+                        excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+                        mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+                        distinctio.</p>
+                    <a class="btn btn-primary"
+                       href="#">Get to know me better</a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!-- Section About me end-->
+
+        <!-- Section Follow on Instagram -->
+        <section id="sectionInst" class="container">
+
+            <h2 class="text-center">Follow <a href="#" class="text-decoration-none px-2">@John_Doe</a>
+                on Instagram</h2>
+
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-sm-4 pb-2">
+                    <img src="/images/INSTAGRAM_IMG/INSTA01.jpg" alt="">
+                </div>
+                <div class="col-lg-2 col-sm-4 pb-2">
+                    <img src="/images/INSTAGRAM_IMG/INSTA02.jpg" alt="">
+                </div>
+                <div class="col-lg-2 col-sm-4 pb-2">
+                    <img src="/images/INSTAGRAM_IMG/INSTA03.jpg" alt="">
+                </div>
+                <div class="col-lg-2 col-sm-4 pb-2 d-none d-sm-block">
+                    <img src="/images/INSTAGRAM_IMG/INSTA04.jpg" alt="">
+                </div>
+                <div class="col-lg-2 col-sm-4 pb-2 d-none d-sm-block">
+                    <img src="/images/INSTAGRAM_IMG/INSTA05.jpg" alt="">
+                </div>
+                <div class="col-lg-2 col-sm-4 pb-2 d-none d-sm-block">
+                    <img src="/images/INSTAGRAM_IMG/INSTA06.jpg" alt="">
+                </div>
+            </div>
+
+        </section>
+        <!-- Section Follow on Instagram end -->
+
+
+
+        <!-- footer -->
+        <footer id="footer" class="footer container-flex p-5 mt-3">
+
+            <div class="row w-lg-75">
+                <!-- contact -->
+                <div class="col-xl-4 col-md-6">
+
+                    <ul>
+                        <li class="m-lg-2 m-0">
+                            <h4 class="">Contacts</h4>
+                        </li>
+                        <li class="m-lg-2 m-0"><a class="text-decoration-none" href="mailto:support@example.com">
+                                <i class="bi bi-envelope me-lg-2"></i>
+                                john.doe@cookbook.com</a>
+                        </li>
+                        <li class="m-lg-2 m-0"><a class="text-decoration-none" href="tel:019107848015">
+                                <i class="abi bi-telephone me-lg-2"></i>
+                                01-910-784-8015</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- follow -->
+                <div class="col-xl-4 col-md-6">
+                    <div id="followMe" class="row">
+                        <h4 class="pt-2">Follow me</h4>
+                        <div class="gap-2">
+                            <button id="facebook" class="btn btn-outline-dark d-inline p-3 fs-5 border-0"><i
+                                   class="bi bi-facebook"></i>
+                            </button>
+                            <button id="twitter" class="btn btn-outline-dark d-inline p-3 fs-5 border-0"><i
+                                   class="bi bi-twitter"></i></button>
+                            <button id="instagram" class="btn btn-outline-dark d-inline p-3 fs-5 border-0"><i
+                                   class="bi bi-instagram"></i>
+                            </button>
+                            <button id="pinterest" class="btn btn-outline-dark d-inline p-3 fs-5 border-0"><i
+                                   class="fab fa-pinterest-p ps-1 pe-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Subscribe -->
+                <div class="col-xl-4 col-12">
+                    <h2 class="mb-2 text-center">Subscribe and never miss a post!</h6>
+                        <!-- Form subscribe-->
+                        <form class="input-group mx-auto" style="max-width: 600px;">
+                            <input class="form-control" type="email" placeholder="Enter your email" required="">
+                            <button class="btn btn-outline-success" type="submit"><i class="bi bi-cursor"></i></button>
+                        </form>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+
+
+        <!--Popper.js, Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+                integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+                crossorigin="anonymous">
+                </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+                integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+                crossorigin="anonymous">
+                </script>
+
+        <!-- Font Awesome icons -->
+        <script src="https://kit.fontawesome.com/25d77e523f.js" crossorigin="anonymous"></script>
+
+
+
+
+        <!-- My scripts -->
+        <script src="script/scripts.js"></script>
+
+
+
+    </body>
+
+</html>
